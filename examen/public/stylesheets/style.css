@@ -192,12 +192,4 @@ footer {
   align-items: center; 
 }
 
-@media (max-width: 900px) {
-  .hero {
-      flex-direction: column;
-      padding: 2rem;
-  }
-  .columna-texto {
-      text-align: center;
-  }
-}
+
