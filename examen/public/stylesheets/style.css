@@ -1,8 +1,190 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --morado-principal: #667eea;
+  --morado-secundario: #764ba2;
+  --fondo-claro: #f5f7fa;
+  --fondo-gris: #c3cfe2;
+  --borde: #e0e0e0;
+  --fondo-cancelar: #f0f0f0;
+  --footer-bg: #2c3e50;
+  --blanco: #ffffff;
 }
 
-a {
-  color: #00B7FF;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera-principal {
+  background: linear-gradient(to right, var(--morado-principal), var(--morado-secundario));
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+}
+
+.cabecera-principal nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.cabecera-principal a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  flex: 1;
+  background: linear-gradient(135deg, var(--fondo-claro) 0%, var(--fondo-gris) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 4rem;
+}
+
+.columna-texto {
+  flex: 1;
+  max-width: 500px;
+}
+
+.titulo-gradiente {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--morado-principal) 0%, var(--morado-secundario) 100%);
+  -webkit-text-fill-color: transparent;
+}
+
+.columna-texto p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.columna-auth {
+  flex: 1;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contenedor-opcion {
+  width: 100%;
+}
+
+.tarjeta {
+  background: linear-gradient(135deg, var(--morado-principal) 0%, var(--morado-secundario) 100%);
+  border-radius: 15px;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s;
+  color: var(--blanco);
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.formulario {
+  display: none;
+  background: var(--blanco);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid var(--borde);
+}
+
+.cabecera-form {
+  background: linear-gradient(to right, var(--morado-principal), var(--morado-secundario));
+  padding: 1.5rem;
+  color: var(--blanco);
+  text-align: center;
+}
+
+.formulario form {
+  padding: 2rem;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--morado-secundario);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.formulario input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  outline-color: var(--morado-principal);
+}
+
+.info-texto {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.grupo-botones {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-enviar {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--morado-principal) 0%, var(--morado-secundario) 100%);
+  color: var(--blanco);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  background: var(--fondo-cancelar);
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .hero {
+      flex-direction: column;
+      padding: 2rem;
+  }
+  .columna-texto {
+      text-align: center;
+  }
 }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Aplicación</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="cabecera-principal">
+        <div class="logo">Mi Aplicación</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="columna-texto">
+            <h1 class="titulo-gradiente">¡Bienvenido!</h1>
+            <p>Descubre todas las funcionalidades que tenemos preparadas para ti. Únete a nuestra comunidad y empieza a disfrutar de una experiencia única.</p>
+            <p>Accede a tu cuenta o regístrate en segundos para comenzar tu aventura con nosotros.</p>
+        </div>
+
+        <div class="columna-auth">
+            <div class="contenedor-opcion">
+                <div id="tarjeta-login" class="tarjeta" onclick="abrirFormulario('login')">
+                    <h2>Ya estoy registrado</h2>
+                </div>
+                <div id="form-login" class="formulario">
+                    <div class="cabecera-form">
+                        <h2>Ya estoy registrado</h2>
+                    </div>
+                    <form>
+                        <label>Correo electrónico</label>
+                        <input type="email" required>
+                        <label>Contraseña</label>
+                        <input type="password" required>
+                        <div class="grupo-botones">
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                            <button type="button" class="btn-cancelar" onclick="cerrarFormularios()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contenedor-opcion">
+                <div id="tarjeta-registro" class="tarjeta" onclick="abrirFormulario('registro')">
+                    <h2>No estoy registrado aún</h2>
+                </div>
+                <div id="form-registro" class="formulario">
+                    <div class="cabecera-form">
+                        <h2>No estoy registrado aún</h2>
+                    </div>
+                    <form>
+                        <p class="info-texto">Introduce tu correo electrónico para crear una cuenta.</p>
+                        <label>Correo electrónico</label>
+                        <input type="email" required>
+                        <div class="grupo-botones">
+                            <button type="submit" class="btn-enviar">Enviar</button>
+                            <button type="button" class="btn-cancelar" onclick="cerrarFormularios()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>By Francisco Romero, 2025</p>
+    </footer>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
